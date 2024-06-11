@@ -10,7 +10,7 @@ pixel = neopixel.NeoPixel(board.NEOPIXEL, 1) #shortens neopixel command, can be 
 i2c = board.STEMMA_I2C()  # For using the built-in STEMMA QT connector on a microcontroller
 
 try: #try statement to catch errors
-    with open("/VEML7700_data_values.txt", "a") as light_log: #open text file, in appendage mode, called light_log
+    with open("/VEML7700_data_values.csv", "a") as light_log: #open text file, in appendage mode, called light_log
         while True: #loops forever
             veml7700 = adafruit_veml7700.VEML7700(i2c) #pull data from sensor, storing as variable
             light_log.write("Lux:  ") #begin writing to file
