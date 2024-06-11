@@ -13,7 +13,7 @@ temperature_offset = -5 #tempature offset, needs to be tested against control se
 
 
 try: #try statement to catch errors
-    with open("/BME688_data_values.txt", "a") as data_log: #open text file, in appendage mode, called data_log
+    with open("/BME688_data_values.csv", "a") as data_log: #open text file, in appendage mode, called data_log
         while True:
             bme680 = adafruit_BME680.Adafruit_BME680_I2C(i2c, debug=False) #pull data from sensor, storing as variable
             bme680.sea_level_pressure = 1013.25 #local sea level pressure, needs to be changed
